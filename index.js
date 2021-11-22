@@ -1,3 +1,4 @@
+
 const { listContacts,
     getContactById,
     removeContact,
@@ -20,11 +21,11 @@ const argv = program.opts();
 async function invokeAction({ action, id, name, email, phone }) {
     switch (action) {
         case "list":
-            console.log(await listContacts());
+            await listContacts();
             break;
 
         case "get":
-            getContactById(id);
+            await getContactById(id);
             break;
 
         case "add":
@@ -41,4 +42,3 @@ async function invokeAction({ action, id, name, email, phone }) {
 }
 
 invokeAction(argv);
-listContacts();

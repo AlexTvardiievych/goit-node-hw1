@@ -1,29 +1,31 @@
 {
   "name": "goit-node-hw1",
   "version": "1.0.0",
-  "description": "homework1",
+  "description": "no",
   "main": "index.js",
   "scripts": {
-    "start": "node index",
-    "start:dev": "nodemon index",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "start:dev": "nodemon index.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AlexTvardiievych/goit-node-hw1.git"
   },
   "keywords": [
-    "node-hw-1"
+    "hw1"
   ],
-  "author": "Tvardiievych A.O",
+  "author": "TvardiievychOO",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/AlexTvardiievych/goit-node-hw1/issues"
   },
   "homepage": "https://github.com/AlexTvardiievych/goit-node-hw1#readme",
   "devDependencies": {
-    "commander": "^8.3.0",
-    "generate-unique-id": "^2.0.1",
     "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "commander": "^8.3.0",
+    "generate-unique-id": "^2.0.1"
   }
 }

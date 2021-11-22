@@ -1,21 +1,23 @@
 const path = require("path");
 const fs = require("fs").promises;
 const generateUniqueId = require("generate-unique-id");
+let res = {};
 
 const contactsPath = path.resolve("./db/contacts.json");
 
 async function listContacts() {
     const contacts = await fs.readFile(contactsPath, "utf8");
+    res = JSON.parse(contacts);
+    console.table(JSON.parse(contacts));
     return JSON.parse(contacts);
 }
 
 
 async function getContactById(contactId) {
     const parsedContacts = await listContacts();
-
-    return console.log(
-        parsedContacts.find((contact) => contact.id === Number(contactId))
-    );
+    res = parsedContacts.find((contact) => contact.id === Number(contactId));
+    console.log(res);
+    return res;
 }
 
 async function removeContact(contactId) {
